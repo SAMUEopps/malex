@@ -30,13 +30,20 @@ const AboutSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <figure className="w-full">
-            <Image
+            {/*<Image
               src="https://github.com/codewithsadee/adex/blob/master/assets/images/about-banner.png?raw=true"
               alt="About banner"
               width={800}
               height={580}
               className="w-full h-auto"
-            />
+            />*/}
+            <Image
+                  src="/assets/images/Laboratory-bro.png" // Local path
+                  alt="Feature banner"
+                  width={800}
+                  height={531}
+                  className="w-full h-auto"
+                />
           </figure>
 
           <div className="lg:pl-12">

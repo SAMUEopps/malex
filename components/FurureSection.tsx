@@ -40,13 +40,21 @@ const FeatureSection = () => {
 
           {/* Feature Image on the Right */}
           <figure className="order-last lg:order-none">
-            <Image
+            {/*<Image
               src="https://github.com/codewithsadee/adex/blob/master/assets/images/feature-banner.png?raw=true"
               alt="Feature banner"
               width={800}
               height={531}
               className="w-full h-auto"
-            />
+            />*/}
+  <Image
+      src="/assets/images/chemistry lab-cuate.png" // Local path
+      alt="Feature banner"
+      width={800}
+      height={531}
+      className="w-full h-auto"
+    />
+
           </figure>
         </div>
       </div>

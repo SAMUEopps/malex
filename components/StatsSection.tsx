@@ -4,7 +4,7 @@ const StatsSection = () => {
         <div className="container mx-auto px-4">
           <ul 
             className="grid grid-cols-2 md:grid-cols-4 gap-y-9 gap-x-6 py-[45px] px-[30px] rounded-lg bg-cover bg-center"
-            style={{ backgroundImage: "url(https://github.com/codewithsadee/adex/blob/master/assets/images/stats-bg.jpg?raw=true)" }}
+            style={{ backgroundImage: "url('/assets/images/Untitled.png')" }}
           >
             <StatItem number="7518" label="Completed Projects" />
             <StatItem number="3472" label="Happy Customers" />

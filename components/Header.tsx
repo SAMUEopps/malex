@@ -598,7 +598,9 @@ export default function Header() {
 import { useState, useEffect } from 'react';
 import { IoCloseOutline, IoMenuOutline, IoLogoTwitter, IoLogoFacebook, IoLogoInstagram, IoLogoYoutube } from 'react-icons/io5';
 import { IoLogoDribbble } from 'react-icons/io';
-import Image from 'next/image';
+import { UserPlus, Shield } from "lucide-react";
+import Link from "next/link";
+
 
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -622,13 +624,13 @@ export default function Header() {
     { icon: <IoLogoYoutube />, url: '#' },
   ];
 
-  const navLinks = ['Home', 'About', 'Projects', 'Blog', 'Contact'];
+  const navLinks = ['Home', 'About', 'Products','Catalogue', 'Blog', 'Contact'];
 
   return (
     <header className={`${isHeaderFixed ? 'fixed bg-white shadow-md animate-slideIn' : 'absolute'} w-full top-0 z-40 transition-all`}>
       <div className="container mx-auto px-4 flex justify-between items-center py-5">
         {/* Logo */}
-        <a href="#">
+        {/*<a href="#">
           <Image
             src={isHeaderFixed ? 
               "https://raw.githubusercontent.com/codewithsadee/adex/9cb717198b2bf09bcb585c29328d1f9e4b61f2ba/assets/images/logo-dark.svg" :
@@ -637,8 +639,12 @@ export default function Header() {
             height={24}
             alt="Adex home"
           />
+        </a>*/}
+        <a href="#">
+          <span style={{ fontFamily: 'Arial', fontSize: '1.5rem', fontWeight: 'bold', color: isHeaderFixed ? '#333' : '#fff' }}>
+            Malex
+          </span>
         </a>
-
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex gap-6 ml-auto mr-8">
           {navLinks.map((link) => (
@@ -653,11 +659,18 @@ export default function Header() {
         </nav>
 
         {/* Desktop CTA Button */}
-        <a href="#" className="hidden lg:inline-block bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
-          Free Trial
+      <div className='flex items-center'>
+        <a href="#" className="hidden lg:flex items-center gap-2 bg-white text-blue-600 px-6 py-2 rounded-full hover:bg-gray-200 transition-colors">
+          <UserPlus size={18} /> Register
         </a>
-
-        {/* Mobile Menu Button */}
+        <Link
+          href="/admin"
+          className="hidden lg:flex items-center gap-2 bg-white text-blue-600 px-6 py-2 rounded-full hover:bg-gray-200 transition-colors mx-3"
+        >
+          <Shield size={18} /> Admin
+        </Link>;
+      </div>
+       {/* Mobile Menu Button */}
         <button
           onClick={toggleNav}
           className={`text-3xl lg:hidden ${isHeaderFixed ? 'text-gray-800' : 'text-white'}`}
@@ -675,13 +688,22 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       <nav className={`fixed top-0 left-0 w-72 h-screen bg-gray-800 text-white p-8 flex flex-col gap-8 z-50 transform transition-transform ${isNavOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-        <div className="flex justify-between items-center">
+       {/*<div className="flex justify-between items-center">
           <Image src="https://raw.githubusercontent.com/codewithsadee/adex/9cb717198b2bf09bcb585c29328d1f9e4b61f2ba/assets/images/logo-light.svg" width={74} height={24} alt="Adex home" />
           <button onClick={toggleNav} className="text-2xl bg-white bg-opacity-10 p-2 rounded-full hover:bg-opacity-20 transition-colors" aria-label="close menu">
             <IoCloseOutline />
           </button>
-        </div>
-
+        </div>*/}
+        <div className="flex justify-between items-center">
+        <span className="text-xl font-bold text-white">Malex</span>
+        <button
+          onClick={toggleNav}
+          className="text-2xl bg-white bg-opacity-10 p-2 rounded-full hover:bg-opacity-20 transition-colors"
+          aria-label="close menu"
+        >
+          <IoCloseOutline />
+        </button>
+      </div>
         <ul className="flex flex-col gap-4 flex-grow">
           {navLinks.map((link) => (
             <li key={link}>

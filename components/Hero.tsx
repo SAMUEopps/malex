@@ -181,9 +181,10 @@ import { useState } from 'react';
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    { image: 'https://github.com/codewithsadee/adex/blob/master/assets/images/hero-slide-1.jpg?raw=true', hasPlayButton: false },
-    { image: 'https://github.com/codewithsadee/adex/blob/master/assets/images/hero-slide-2.jpg?raw=true', hasPlayButton: true },
-    { image: 'https://github.com/codewithsadee/adex/blob/master/assets/images/hero-slide-3.jpg?raw=true', hasPlayButton: false },
+    
+    { image: 'https://i.pinimg.com/736x/bb/74/ee/bb74eeb1fdeab54ae029d19ca30bfc0d.jpg', hasPlayButton: false },
+    { image: 'https://i.pinimg.com/736x/40/ec/49/40ec494e0006d519f737ff90f735512f.jpg', hasPlayButton: true },
+    { image: 'https://i.pinimg.com/736x/7f/85/1e/7f851ea18f901194d8511dd2fef39773.jpg', hasPlayButton: false },
   ];
 
   const handleNext = () => {
@@ -197,7 +198,7 @@ const Hero = () => {
   return (
     <section 
       className="relative bg-cover bg-center pt-[calc(110px+30px)] lg:pt-[calc(90px+10px)]"
-      style={{ backgroundImage: "url('https://github.com/codewithsadee/adex/blob/master/assets/images/hero-bg.jpg?raw=true')" }}
+      style={{ backgroundImage: "url('/assets/images/Untitled.png')" }} 
     >
       {/*<div className="container mx-auto px-16 py-16 pt-0">*/}
       <div className="container mx-auto p-4 sm:p-16 pt-0 sm:mb-16 sm:mt-0">
@@ -206,13 +207,13 @@ const Hero = () => {
           {/* Content Section */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl font-bold text-white lg:text-5xl xl:text-6xl">
-              Crafting project specific solutions with expertise.
+              Chemicals & Tools You Trust.
             </h1>
             <p className="my-6 text-lg text-white md:text-xl lg:my-8 lg:pr-20">
-              We’re a creative company that focuses on establishing long-term relationships with customers.
+              Your trusted source of premium lab chemicals and precision tools, we've got your lab covered.
             </p>
             <div className="flex flex-wrap justify-center gap-4 lg:justify-start">
-              <button className="rounded-full bg-blue-600 px-8 py-3 text-white hover:bg-blue-700">
+              <button className="rounded-full bg-white px-8 py-3 text-blue-600 hover:bg-gray-200">
                 Explore Now
               </button>
               <button className="rounded-full border-2 border-white px-8 py-3 text-white hover:border-blue-400 hover:text-blue-400">

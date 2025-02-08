@@ -1,21 +1,21 @@
 const ProjectsSection = () => {
     const projects = [
       {
-        image: "https://github.com/codewithsadee/adex/blob/master/assets/images/blog-1.jpg?raw=true",
+        image: "https://i.pinimg.com/736x/09/a1/c4/09a1c493de34f839c023fca1aa0ecde0.jpg",
         title: "Ligula tristique quis risus",
         text: "Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor.",
         date: "2022-04-14",
         category: "Coding"
       },
       {
-        image: "https://github.com/codewithsadee/adex/blob/master/assets/images/blog-2.jpg?raw=true",
+        image: "https://i.pinimg.com/736x/45/ce/c7/45cec7b33179244b4947ed66e0a1b472.jpg",
         title: "Nullam id dolor elit id nibh",
         text: "Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor.",
         date: "2022-03-29",
         category: "Workspace"
       },
       {
-        image: "https://github.com/codewithsadee/adex/blob/master/assets/images/blog-3.jpg?raw=true",
+        image: "https://i.pinimg.com/736x/8c/cc/95/8ccc955df35bad84d46ad208bbecdf64.jpg",
         title: "Ultricies fusce porta elit",
         text: "Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor.",
         date: "2022-02-26",
